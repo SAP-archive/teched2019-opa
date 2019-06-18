@@ -1,0 +1,16 @@
+{
+  "name": "uiveri5demo",
+  "version": "1.0.0",
+  "description": "opa demo app",
+  "scripts": {
+    "start": "ui5 serve -o index.html"
+  },
+  "dependencies": {
+    "@sap/approuter": "^6.0.0"
+  },
+  "devDependencies": {
+    "karma": "^4.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-ui5": "^1.0.0"
+  }
+}
