@@ -1,16 +1,25 @@
 {
-  "name": "uiveri5demo",
+  "name": "teched2019-opa",
   "version": "1.0.0",
-  "description": "opa demo app",
+  "description": "TechEd 2019 OPA demo",
   "scripts": {
-    "start": "ui5 serve -o index.html"
-  },
-  "dependencies": {
-    "@sap/approuter": "^6.0.0"
+    "start": "ui5 serve -o index.html",
+    "test": "karma start --single-run",
+    "test-start": "karma start",
+    "karma": "karma start karma-ci.conf.js"
   },
   "devDependencies": {
+    "@ui5/cli": "^1.5.4",
     "karma": "^4.1.0",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-ui5": "^1.0.0"
-  }
+    "karma-coverage": "^1.1.2",
+    "karma-firefox-launcher": "1.1.0",
+    "karma-htmlfile-reporter": "^0.3.8",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-qunit": "^3.1.2",
+    "karma-ui5": "^1.0.1",
+    "karma-webdriver-launcher": "^1.0.5",
+    "qunit": "^2.9.2"
+  },
+  "dependencies": {}
 }

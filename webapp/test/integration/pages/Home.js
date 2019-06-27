@@ -9,28 +9,14 @@ sap.ui.define([
 	"use strict";
 
 	Opa5.createPageObjects({
-		onTheHome : {
-			viewName : "Home",
+		onTheHomePage : {
+
 			actions : {
-				iPressOnTheFlatScreensCategory : function () {
-					return this.waitFor({
-						controlType : "sap.m.StandardListItem",
-						matchers : new BindingPath({path : "/ProductCategories('FS')"}),
-						actions : new Press(),
-						errorMessage : "The category list does not contain required selection"
-					});
-				}
+				
 			},
 
 			assertions: {
-				iShouldSeeTheCategoryList : function () {
-					return this.waitFor({
-						id : "categoryList",
-						success : function (oList) {
-							Opa5.assert.ok(oList, "Found the category List");
-						}
-					});
-				}
+				
 			}
 		}
 	});
