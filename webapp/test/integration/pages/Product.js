@@ -18,7 +18,7 @@ sap.ui.define([
 						controlType: "sap.m.Button",
 						matchers: new Properties({text: "Add to Cart"}),
 						actions : new Press(),
-						errorMessage: "The press action could not be executed"
+						errorMessage: "The add to cart button was not found and could not be pressed"
 					});
 				},
 
