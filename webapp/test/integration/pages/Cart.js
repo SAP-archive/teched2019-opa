@@ -5,7 +5,7 @@ sap.ui.define([
 	"use strict";
 
 	Opa5.createPageObjects({
-		onTheCart : {
+		onTheCartPage : {
 			viewName : "Cart",
 
 			actions : {

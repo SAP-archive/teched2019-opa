@@ -16,36 +16,36 @@ sap.ui.define([
 		Given.iStartMyApp();
 
 		// Assertions
-		Then.onTheHome.iShouldSeeTheCategoryList();
+		Then.onTheHomePage.iShouldSeeTheCategoryList();
 		
 	});
 
 	//We are still on the second category
 	opaTest("Should see the product list", function (Given, When, Then) {
 		// Actions
-		When.onTheHome.iPressOnTheFlatScreensCategory();
+		When.onTheHomePage.iPressOnTheFlatScreensCategory();
 
 		// Assertions
-		Then.onTheCategory.iShouldBeTakenToTheFlatScreensCategory().
+		Then.onTheCategoryPage.iShouldBeTakenToTheFlatScreensCategory().
 			and.iShouldSeeTheProductList();
 	});
 
 	opaTest("Should see an avatar button on the product page", function (Given, When, Then) {
 		// Actions
-		When.onTheCategory.iPressOnTheFirstProduct();
+		When.onTheCategoryPage.iPressOnTheFirstProduct();
 
 		// Assertions
-		Then.onTheProduct.iShouldSeeAnAvatarButton();
+		Then.onTheProductPage.iShouldSeeAnAvatarButton();
 	});
 
 	opaTest("Should add a product to the cart", function (Given, When, Then) {
 		// Actions
-		When.onTheProduct.iAddTheDisplayedProductToTheCart();
+		When.onTheProductPage.iAddTheDisplayedProductToTheCart();
 
-		When.onTheProduct.iToggleTheCart();
+		When.onTheProductPage.iToggleTheCart();
 
 		// Assertions
-		Then.onTheCart.iShouldSeeTheProductInMyCart()
+		Then.onTheCartPage.iShouldSeeTheProductInMyCart()
 			.and.iShouldSeeTheTotalPriceUpdated();
 
 		// Cleanup

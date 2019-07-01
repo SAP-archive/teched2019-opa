@@ -11,7 +11,7 @@ sap.ui.define([
 	"use strict";
 
 	Opa5.createPageObjects({
-		onTheCategory : {
+		onTheCategoryPage : {
 			viewName: "Category",
 
 			actions: {

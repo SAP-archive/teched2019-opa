@@ -9,7 +9,7 @@ sap.ui.define([
 	"use strict";
 
 	Opa5.createPageObjects({
-		onTheHome : {
+		onTheHomePage : {
 			viewName : "Home",
 			actions : {
 				iPressOnTheFlatScreensCategory : function () {

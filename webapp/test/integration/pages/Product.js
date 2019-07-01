@@ -9,7 +9,7 @@ sap.ui.define([
 	"use strict";
 
 	Opa5.createPageObjects({
-		onTheProduct: {
+		onTheProductPage: {
 			viewName: "Product",
 
 			actions: {
