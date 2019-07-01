@@ -1,7 +1,7 @@
 {
   "name": "teched2019-opa",
   "version": "1.0.0",
-  "description": "opa demo app",
+  "description": "TechEd 2019 OPA demo",
   "scripts": {
     "start": "ui5 serve -o index.html",
     "test": "karma start --single-run",
@@ -11,6 +11,9 @@
     "@ui5/cli": "^1.5.4",
     "karma": "^4.1.0",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-ui5": "^1.0.0"
-  }
+    "karma-qunit": "^3.1.2",
+    "karma-ui5": "^1.0.0",
+    "qunit": "^2.9.2"
+  },
+  "dependencies": {}
 }

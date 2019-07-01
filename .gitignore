@@ -1,8 +1,6 @@
 /node_modules
 /target
 /.idea
-/selenium
-/e2e/**/target
 /.vscode
 
 /**/*debug.log

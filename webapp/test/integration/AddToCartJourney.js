@@ -17,6 +17,7 @@ sap.ui.define([
 
 		// Assertions
 		Then.onTheHome.iShouldSeeTheCategoryList();
+		
 	});
 
 	//We are still on the second category
@@ -49,5 +50,5 @@ sap.ui.define([
 
 		// Cleanup
 		Then.iTeardownMyApp();
-	});	
+	});
 });
