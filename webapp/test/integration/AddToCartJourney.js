@@ -17,10 +17,8 @@ sap.ui.define([
 
 		// Assertions
 		Then.onTheHomePage.iShouldSeeTheCategoryList();
-		
 	});
 
-	//We are still on the second category
 	opaTest("Should see the product list", function (Given, When, Then) {
 		// Actions
 		When.onTheHomePage.iPressOnTheFlatScreensCategory();
