@@ -19,12 +19,41 @@ module.exports = function (config) {
         "sap/ui/demo/cart/test/integration/AllJourneys"
       ]
     },
-    browsers: ["Chrome_Custom"],
+    client: {			
+			qunit: {
+				showUI: true
+			}
+    },
+    browsers: ["ChromeCustom"],
     customLaunchers: {
-      Chrome_Custom: {
+      ChromeCustom: {
         base: 'Chrome',
         flags: ['--start-maximized']
+      },
+      ChromeCustomHeadless: {
+        base: 'ChromeHeadless',
+        flags: ['--window-size=1600,900']
       }
-    }
+    },    
+    // level of browser logging
+		browserConsoleLogOptions: {
+			level: 'warn'
+		},
+    preprocessors: {
+      '**/webapp/!(test|localService)/**/*.js': ['coverage']
+    }, 
+    coverageReporter: {
+			includeAllSources: true,
+			reporters: [
+				{
+					type: 'html',
+					dir: './coverage/'
+				},
+				{
+					type: 'text'
+				}
+      ]			
+		},
+    reporters : [ 'progress', 'coverage' ]
   });
 };

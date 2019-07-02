@@ -5,7 +5,8 @@
   "scripts": {
     "start": "ui5 serve -o index.html",
     "test": "karma start --single-run",
-    "test-start": "karma start"
+    "test-start": "karma start",
+    "karma": "karma start karma-ci.conf.js"
   },
   "devDependencies": {
     "@ui5/cli": "^1.5.4",
