@@ -8,7 +8,7 @@ To run the app, you need to have node and npm installed.
 To run the app you have to do following steps:
 Clone the repo:
 ```bash
-git clone 
+git clone https://github.wdf.sap.corp/ui5delivery/teched2019-opa.git
 ```
 Than intsall the app:
 
