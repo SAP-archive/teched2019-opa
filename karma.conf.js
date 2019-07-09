@@ -20,11 +20,13 @@ module.exports = function (config) {
       ]
     },
     client: {			
-			qunit: {
-				showUI: true
-			}
+	qunit: {
+	   showUI: true
+	}
     },
-    browsers: ["ChromeCustom"],
+    browsers: ["ChromeCustomHeadless"],
+    singleRun: true,
+    logLevel: config.LOG_INFO,
     customLaunchers: {
       ChromeCustom: {
         base: 'Chrome',
@@ -54,6 +56,12 @@ module.exports = function (config) {
 				}
       ]			
 		},
-    reporters : [ 'progress', 'coverage' ]
+	  junitReporter: {
+			outputDir: "./target/karma",
+			outputFile: "TEST-qunit.xml",
+			suite: "",
+			useBrowserName: true
+		  },
+    reporters : [ 'progress', 'coverage', 'junit' ]
   });
 };
