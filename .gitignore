@@ -1,9 +1,8 @@
+/coverage
 /node_modules
 /target
 /.idea
 /.vscode
-
 /**/*debug.log
-
 .DS_Store
 package-lock.json

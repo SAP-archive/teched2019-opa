@@ -49,7 +49,7 @@ module.exports = function (config) {
 			reporters: [
 				{
 					type: 'html',
-					dir: './coverage/'
+					dir: './target/coverage'
 				},
 				{
 					type: 'text'
@@ -57,11 +57,22 @@ module.exports = function (config) {
       ]			
 		},
 	  junitReporter: {
-			outputDir: "./target/karma",
+			outputDir: "./target/Junit",
 			outputFile: "TEST-qunit.xml",
 			suite: "",
 			useBrowserName: true
-		  },
-    reporters : [ 'progress', 'coverage', 'junit' ]
+      },
+      htmlReporter: {
+        outputFile: './target/Html/JUnit.html',
+              
+        // Optional
+        pageTitle: 'Test Results',
+        subPageTitle: 'Detailed test results for OPA 5',
+        groupSuites: true,
+        useCompactStyle: true,
+        useLegacyStyle: true,
+        showOnlyFailed: false
+      },
+    reporters : [ 'progress', 'coverage', 'junit', 'html' ]
   });
 };
