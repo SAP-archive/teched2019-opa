@@ -10,7 +10,7 @@ Clone the repo:
 ```bash
 git clone https://github.wdf.sap.corp/ui5delivery/teched2019-opa.git
 ```
-Than intsall the app:
+Than install the app:
 
 ```bash
 cd teched2019-opa
