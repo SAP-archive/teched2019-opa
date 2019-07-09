@@ -1,9 +1,9 @@
 module.exports = function (config) {
   config.set({
-    frameworks: ["ui5","qunit"],
+    frameworks: ["ui5", "qunit"],
     ui5: {
       url: "https://openui5.hana.ondemand.com",
-      mode: "script",     
+      mode: "script",
       config: {
         theme: 'sap_belize',
         language: 'EN',
@@ -14,15 +14,15 @@ module.exports = function (config) {
           "sap.ui.demo.cart": "./base/webapp",
           "sap.ui.demo.mock": "https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/"
         }
-      },     
-      tests: [      
+      },
+      tests: [
         "sap/ui/demo/cart/test/integration/AllJourneys"
       ]
     },
-    client: {			
-	qunit: {
-	   showUI: true
-	}
+    client: {
+      qunit: {
+        showUI: true
+      }
     },
     browsers: ["ChromeCustomHeadless"],
     singleRun: true,
@@ -36,32 +36,42 @@ module.exports = function (config) {
         base: 'ChromeHeadless',
         flags: ['--window-size=1600,900']
       }
-    },    
+    },
     // level of browser logging
-		browserConsoleLogOptions: {
-			level: 'warn'
-		},
+    browserConsoleLogOptions: {
+      level: 'warn'
+    },
     preprocessors: {
       '**/webapp/!(test|localService)/**/*.js': ['coverage']
-    }, 
+    },
     coverageReporter: {
-			includeAllSources: true,
-			reporters: [
-				{
-					type: 'html',
-					dir: './coverage/'
-				},
-				{
-					type: 'text'
-				}
-      ]			
-		},
-	  junitReporter: {
-			outputDir: "./target/karma",
-			outputFile: "TEST-qunit.xml",
-			suite: "",
-			useBrowserName: true
-		  },
-    reporters : [ 'progress', 'coverage', 'junit' ]
+      includeAllSources: true,
+      reporters: [{
+          type: 'html',
+          dir: './target/coverage'
+        },
+        {
+          type: 'text'
+        }
+      ]
+    },
+    junitReporter: {
+      outputDir: "./target/junit",
+      outputFile: "TEST-qunit.xml",
+      suite: "",
+      useBrowserName: true
+    },
+    htmlReporter: {
+      outputFile: './target/html/JUnit.html',
+
+      // Optional
+      pageTitle: 'Test Results',
+      subPageTitle: 'Detailed test results for OPA 5',
+      groupSuites: true,
+      useCompactStyle: true,
+      useLegacyStyle: true,
+      showOnlyFailed: false
+    },
+    reporters: ['progress', 'coverage', 'junit', 'html']
   });
 };
