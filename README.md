@@ -1,4 +1,4 @@
-# Teched2019-OPA5 testing Demo
+# Teched2019-OPA5 testing Hands On 
 This project provides code samples and test case to demo OPA5 testing for teched2019 purpose. These testcases cover unit and integration tests running against a mock server.
 
 # Requirements
