@@ -29,4 +29,4 @@ npm run test-start
 This project is provided "as-is": there is no guarantee that raised issues will be answered or addressed in future releases.
 
 # License
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the SAP Sample Code License, except as noted otherwise in the LICENSE file.
+Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the SAP Sample Code License, except as noted otherwise in the [LICENSE](LICENSE) file.
