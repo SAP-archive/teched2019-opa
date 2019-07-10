@@ -4,7 +4,7 @@ module.exports = function (config) {
     ui5: {
       url: "https://openui5.hana.ondemand.com"
     },
-    browsers: ["ChromeCustomHeadless"],   
+    browsers: ["ChromeCustom"],   
     customLaunchers: {
       ChromeCustom: {
         base: 'Chrome',
