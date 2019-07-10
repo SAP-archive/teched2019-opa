@@ -1,5 +1,5 @@
-# Teched2019-OPA5 testing Hands On 
-This project provides code samples and test case to demo OPA5 testing for teched2019 purpose. These testcases cover unit and integration tests running against a mock server.
+# SAP TechEd 2019 OPA5 Testing Hands-On 
+This project provides code samples and a test case to demo OPA5 testing for a hands-on session at SAP TechEd 2019. These test cases cover unit and integration tests running against a mock server.
 
 # Requirements
 To run the app, you need to have node and npm installed.
@@ -26,7 +26,7 @@ To run tests in watch mode:
 npm run test-start
 ```
 # Support
-This project is provided "as-is": there is no guarantee that raised issues will be answered or addressed in future releases.
+This project is provided "as-is"; there is no guarantee that raised issues will be answered or addressed in future releases.
 
 # License
 Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the SAP Sample Code License, except as noted otherwise in the [LICENSE](LICENSE) file.
