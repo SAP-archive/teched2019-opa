@@ -13,7 +13,7 @@ git clone https://github.wdf.sap.corp/ui5delivery/teched2019-opa.git
 Than install the app:
 
 ```bash
-cd teched2019-opa-master
+cd teched2019-opa
 npm install
 npm run start
 ```
