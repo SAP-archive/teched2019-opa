@@ -1,5 +1,5 @@
 # Teched2019-OPA5 testing Hands On 
-This project provides code samples and test case to demo OPA5 testing for teched2019 purpose. These testcases cover unit and integration tests running against a mock server.
+This project provides code samples and test case to demo OPA5 testing for teched2019 purpose. These testcases cover component- and integration tests running against a mock server.
 
 # Requirements
 To run the app, you need to have node and npm installed.
