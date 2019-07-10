@@ -1,32 +1,10 @@
 module.exports = function (config) {
   config.set({
-    frameworks: ["ui5", "qunit"],
+    frameworks: ["ui5"],
     ui5: {
-      url: "https://openui5.hana.ondemand.com",
-      mode: "script",
-      config: {
-        theme: 'sap_belize',
-        language: 'EN',
-        animation: false,
-        compatVersion: 'edge',
-        async: true,
-        resourceRoots: {
-          "sap.ui.demo.cart": "./base/webapp",
-          "sap.ui.demo.mock": "https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/"
-        }
-      },
-      tests: [
-        "sap/ui/demo/cart/test/integration/AllJourneys"
-      ]
+      url: "https://openui5.hana.ondemand.com"
     },
-    client: {
-      qunit: {
-        showUI: true
-      }
-    },
-    browsers: ["ChromeCustomHeadless"],
-    singleRun: true,
-    logLevel: config.LOG_INFO,
+    browsers: ["ChromeCustomHeadless"],   
     customLaunchers: {
       ChromeCustom: {
         base: 'Chrome',
@@ -72,6 +50,7 @@ module.exports = function (config) {
       useLegacyStyle: true,
       showOnlyFailed: false
     },
+    singleRun: true, 
     reporters: ['progress', 'coverage', 'junit', 'html']
   });
 };
