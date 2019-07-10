@@ -1,4 +1,4 @@
-# SAP TechEd 2019 OPA5 Testing Hands-On 
+# SAP TechEd 2019 OPA5 Testing
 This project provides code samples and a test case to demo OPA5 testing for a hands-on session at SAP TechEd 2019. These test cases cover unit and integration tests running against a mock server.
 
 # Requirements
