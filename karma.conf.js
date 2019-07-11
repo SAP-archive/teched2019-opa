@@ -2,31 +2,10 @@ module.exports = function (config) {
   config.set({
     frameworks: ["ui5","qunit"],
     ui5: {
-      url: "https://openui5.hana.ondemand.com",
-      mode: "script",     
-      config: {
-        theme: 'sap_belize',
-        language: 'EN',
-        animation: false,
-        compatVersion: 'edge',
-        async: true,
-        resourceRoots: {
-          "sap.ui.demo.cart": "./base/webapp",
-          "sap.ui.demo.mock": "https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/"
-        }
-      },     
-      tests: [      
-        "sap/ui/demo/cart/test/integration/AllJourneys"
-      ]
-    },
-    client: {			
-	qunit: {
-	   showUI: true
-	}
-    },
+      url: "https://openui5.hana.ondemand.com"
+    },	    
     browsers: ["ChromeCustomHeadless"],
-    singleRun: true,
-    logLevel: config.LOG_INFO,
+    singleRun: true,    
     customLaunchers: {
       ChromeCustom: {
         base: 'Chrome',
@@ -38,31 +17,31 @@ module.exports = function (config) {
       }
     },    
     // level of browser logging
-		browserConsoleLogOptions: {
-			level: 'warn'
-		},
+    browserConsoleLogOptions: {
+	level: 'warn'
+    },
     preprocessors: {
       '**/webapp/!(test|localService)/**/*.js': ['coverage']
     }, 
     coverageReporter: {
-			includeAllSources: true,
-			reporters: [
-				{
-					type: 'html',
-					dir: './target/coverage'
-				},
-				{
-					type: 'text'
-				}
+	includeAllSources: true,
+	reporters: [
+	{
+		type: 'html',
+		dir: './target/coverage'
+	},
+	{
+		type: 'text'
+	}
       ]			
-		},
-	  junitReporter: {
-			outputDir: "./target/Junit",
-			outputFile: "TEST-qunit.xml",
-			suite: "",
-			useBrowserName: true
-      },
-      htmlReporter: {
+    },
+    junitReporter: {
+	outputDir: "./target/Junit",
+	outputFile: "TEST-qunit.xml",
+	suite: "",
+	useBrowserName: true
+    },
+    htmlReporter: {
         outputFile: './target/Html/JUnit.html',
               
         // Optional
