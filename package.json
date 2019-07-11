@@ -1,6 +1,6 @@
 {
   "name": "teched2019-opa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TechEd 2019 OPA demo",
   "scripts": {
     "start": "ui5 serve -o index.html",
