@@ -1,11 +1,13 @@
 sap.ui.define([
 	"sap/ui/test/Opa5",
 	"sap/ui/test/actions/Press",
-	"sap/ui/test/matchers/Properties"
+	"sap/ui/test/matchers/Properties",
+	"sap/ui/test/matchers/I18NText"
 ], function (
 	Opa5,
 	Press,
-	Properties) {
+	Properties,
+	I18NText) {
 	"use strict";
 
 	Opa5.createPageObjects({
@@ -16,7 +18,7 @@ sap.ui.define([
 				iAddTheDisplayedProductToTheCart: function () {
 					return this.waitFor({
 						controlType: "sap.m.Button",
-						matchers: new Properties({text: "Add to Cart"}),
+						matchers: new I18NText({propertyName: "text",key: "addToCartShort"}),
 						actions : new Press(),
 						errorMessage: "The add to cart button was not found and could not be pressed"
 					});
@@ -33,14 +35,14 @@ sap.ui.define([
 			},
 
 			assertions: {
-				iShouldSeeAnAvatarButton: function () {
+				iShouldSeeTheProductTitle: function () {
 					return this.waitFor({
-						controlType: "sap.m.Button",
-						matchers: new Properties({icon: "sap-icon://customer"}),
+						controlType: "sap.m.Title",
+						matchers: new Properties({text: "Bending Screen 21HD"}),
 						success: function () {
-							Opa5.assert.ok(true, "Avatar button is visible");
+							Opa5.assert.ok(true, "Product title is visible");
 						},
-						errorMessage: "There is no avatar button"
+						errorMessage: "There is no product title"
 					});
 				}
 			}

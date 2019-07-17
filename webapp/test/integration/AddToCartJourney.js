@@ -28,12 +28,12 @@ sap.ui.define([
 			and.iShouldSeeTheProductList();
 	});
 
-	opaTest("Should see an avatar button on the product page", function (Given, When, Then) {
+	opaTest("Should see the product page", function (Given, When, Then) {
 		// Actions
 		When.onTheCategoryPage.iPressOnTheFirstProduct();
 
 		// Assertions
-		Then.onTheProductPage.iShouldSeeAnAvatarButton();
+		Then.onTheProductPage.iShouldSeeTheProductTitle();
 	});
 
 	opaTest("Should add a product to the cart", function (Given, When, Then) {

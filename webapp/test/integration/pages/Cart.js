@@ -16,8 +16,8 @@ sap.ui.define([
 				iShouldSeeTheProductInMyCart : function () {
 					return this.waitFor({
 						id : "entryList",
-						success : function () {
-							Opa5.assert.ok(true, "The cart has entries");
+						success : function (oList) {
+							Opa5.assert.equal(oList.getItems().length,1, "The cart has entries");
 						},
 						errorMessage : "The cart does not contain any entries"
 					});
@@ -26,8 +26,8 @@ sap.ui.define([
 				iShouldSeeTheTotalPriceUpdated: function () {
 					return this.waitFor({
 						id: "totalPriceText",
-						success: function () {
-							Opa5.assert.ok(true, "Total price is updated correctly");
+						success: function (oText) {
+							Opa5.assert.equal(oText.getText(),"Total: 250,00 EUR", "Total price is updated correctly");
 						},
 						errorMessage: "Total price is not updated correctly"
 					});

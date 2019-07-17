@@ -29,11 +29,8 @@ sap.ui.define([
 				iShouldSeeTheProductList: function () {
 					return this.waitFor({
 						id: "productList",
-						success: function (oList) {
-							Opa5.assert.ok(
-								oList,
-								"The product list was found"
-							);
+						success: function () {
+							Opa5.assert.ok(true,"The product list was found");
 						},
 						errorMessage: "The product list was not found"
 					});
@@ -43,11 +40,8 @@ sap.ui.define([
 					return this.waitFor({
 						controlType: "sap.m.Page",
 						matchers: new Properties({title: "Flat Screens"}),
-						success: function (aPage) {
-							Opa5.assert.ok(
-								aPage,
-								"The flat screens category page was found"
-							);
+						success: function () {
+							Opa5.assert.ok(true,"The flat screens category page was found");
 						},
 						errorMessage: "The flat screens category page was not found"
 					});

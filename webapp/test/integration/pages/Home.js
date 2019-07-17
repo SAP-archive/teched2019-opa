@@ -11,6 +11,7 @@ sap.ui.define([
 	Opa5.createPageObjects({
 		onTheHomePage : {
 			viewName : "Home",
+
 			actions : {
 				iPressOnTheFlatScreensCategory : function () {
 					return this.waitFor({
@@ -26,8 +27,8 @@ sap.ui.define([
 				iShouldSeeTheCategoryList : function () {
 					return this.waitFor({
 						id : "categoryList",
-						success : function (oList) {
-							Opa5.assert.ok(oList, "Found the category List");
+						success : function () {
+							Opa5.assert.ok(true, "Found the category List");
 						}
 					});
 				}
