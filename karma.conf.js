@@ -4,6 +4,7 @@ module.exports = function (config) {
     ui5: {
       url: "https://openui5.hana.ondemand.com"
     },
+    
     browsers: ["ChromeCustom"],   
     customLaunchers: {
       ChromeCustom: {
@@ -15,16 +16,18 @@ module.exports = function (config) {
         flags: ['--window-size=1600,900']
       }
     },
-    // level of browser logging
+
     browserConsoleLogOptions: {
       level: 'warn'
     },
+
     preprocessors: {
       '**/webapp/!(test|localService)/**/*.js': ['coverage']
     },
     coverageReporter: {
       includeAllSources: true,
-      reporters: [{
+      reporters: [
+        {
           type: 'html',
           dir: './target/coverage'
         },
@@ -33,6 +36,7 @@ module.exports = function (config) {
         }
       ]
     },
+
     junitReporter: {
       outputDir: "./target/junit",
       outputFile: "TEST-qunit.xml",
@@ -50,7 +54,6 @@ module.exports = function (config) {
       useLegacyStyle: true,
       showOnlyFailed: false
     },
-    singleRun: true, 
     reporters: ['progress', 'coverage', 'junit', 'html']
   });
 };
