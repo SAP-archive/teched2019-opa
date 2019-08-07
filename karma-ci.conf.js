@@ -6,6 +6,7 @@ module.exports = function (config) {
   baseConfig(config);
   // Override base config
   config.set({
+    singleRun: true, 
     browsers: ["RemoteChrome"],
     hostname: "karma",
     customLaunchers: {
