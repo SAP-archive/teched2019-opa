@@ -29,14 +29,19 @@ module.exports = function (config) {
       reporters: [
         {
           type: 'html',
-          dir: './target/coverage'
+          dir: 'target/coverage',
+          subdir: '.'
         },
         {
           type: 'text'
         }
       ]
     },
-
+    coverageReporter: {
+      dir: 'target/coverage',
+      subdir: '.'
+      // Would output the results into: .'/coverage/'
+    },
     junitReporter: {
       outputDir: "./target/junit",
       outputFile: "TEST-qunit.xml",
