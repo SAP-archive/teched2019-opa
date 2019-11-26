@@ -10,6 +10,9 @@ module.exports = function (config) {
     customLaunchers: {
       "RemoteChrome": {
         base: "WebDriver",
+        "chromeOptions": {
+          args: ["--headless", "--disable-gpu", "--disable-dev-shm-usage"]
+        },
         config: {
           hostname: "localhost",
           port: 4444
