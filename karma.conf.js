@@ -6,17 +6,6 @@ module.exports = function (config) {
     },
     
     browsers: ["ChromeCustom"],   
-    browserNoActivityTimeout: 60000,
-    customLaunchers: {
-      ChromeCustom: {
-        base: 'Chrome',
-        flags: ['--start-maximized']
-      },
-      ChromeCustomHeadless: {
-        base: 'ChromeHeadless',
-        flags: ['--window-size=1600,900']
-      }
-    },
 
     browserConsoleLogOptions: {
       level: 'warn'
