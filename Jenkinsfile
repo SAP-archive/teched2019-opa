@@ -7,7 +7,7 @@ node {
  git 'https://github.com/SAP-samples/teched2019-opa.git'
  sh 'git checkout solved'
  sh "ls -l"
- def files = findFiles(glob: '**/cart-view.xml')
+ def files = findFiles(glob: '**/Cart.view.xml')
  echo """${files[0].name} ${files[0].path} ${files[0].directory} ${files[0].length} ${files[0].lastModified}"""
 }
 }
