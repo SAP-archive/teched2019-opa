@@ -8,3 +8,4 @@ node {
   // Get some code from a GitHub repository
  sh "ls -l"
 }
+}
