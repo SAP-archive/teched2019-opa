@@ -7,6 +7,6 @@ node {
  git 'https://github.com/SAP-samples/teched2019-opa.git'
  sh 'git checkout solved && git pull'
  def files = findFiles(glob: '**/uiveri5/')
- echo """${files[0].path}"""
+ echo """${files}"""
 }
 }
