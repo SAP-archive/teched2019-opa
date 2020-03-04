@@ -7,6 +7,7 @@ module.exports = function (config) {
   // Override base config
   config.set({
     browsers: ["RemoteChrome"],
+    singleRun: true, 
     customLaunchers: {
       "RemoteChrome": {
         base: "WebDriver",
