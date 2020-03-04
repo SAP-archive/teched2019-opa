@@ -6,7 +6,7 @@
     "start": "ui5 serve -o index.html",
     "test": "karma start --single-run",
     "test-start": "karma start",
-    "karma": "karma start karma-ci.conf.js"
+    "karma": "karma start karma-conf-jaas-ci.js"
   },
   "devDependencies": {
     "@ui5/cli": "^1.5.4",
