@@ -1,7 +1,7 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2019-opa)](https://api.reuse.software/info/github.com/SAP-samples/teched2019-opa)
 
 # Teched2019-OPA5 testing Hands On 
-This project provides code samples and test case to demo OPA5 testing for teched2019 purpose. These testcases cover component- and integration tests running against a mock server.
+This project provides code samples and test case to demo OPA5 (One Page Acceptance Tests) testing for teched2019 purpose. These testcases cover component- and integration tests running against a mock server.
 
 # Requirements
 To run the app, you need to have node and npm installed.
